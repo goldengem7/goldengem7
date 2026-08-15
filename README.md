@@ -1,13 +1,11 @@
 <div align="center">
 
-  <!-- Animated Spider-Man Swinging Over City -->
-  <img src="spiderman_animated.svg" width="100%" alt="Spider-Man City Swing" />
-
-  <br/><br/>
+  <!-- Spider-Verse Animated Header -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,5&height=200&section=header&text=🕷️%20GOLDENJOY%20•%20SPIDER-VERSE%20🕸️&fontSize=34&fontColor=ffffff&animation=twinkling" width="100%"/>
 
   <!-- Typing Animation -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Bungee&weight=700&size=26&pause=1000&color=E23636&center=true&vCenter=true&width=550&lines=SPIDER-VERSE+%E2%80%A2+GOLDENJOY;BUILDER+%E2%80%A2+GAMER+%E2%80%A2+TRADER;WITH+GREAT+POWER+COMES+GREAT+CODE!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Bungee&weight=700&size=24&pause=1000&color=E23636&center=true&vCenter=true&width=550&lines=BUILDER+%E2%80%A2+GAMER+%E2%80%A2+TRADER;WEB-SLINGING+THROUGH+BASE+CHAIN;WITH+GREAT+POWER+COMES+GREAT+CODE!" alt="Typing SVG" />
   </a>
 
   <br/><br/>
@@ -29,9 +27,9 @@
 
 ### 🕷️ About Me
 
-- 🎮 **Gamer:** Grinding games & exploring on-chain metaverses
-- 📈 **Trader:** Active in crypto & market trends
-- 🛠️ **Builder:** Building smart contracts on **Base** network
+- 🎮 **Gamer:** Grinding competitive games & exploring on-chain metaverses
+- 📈 **Trader:** Crypto & decentralized market trader
+- 🛠️ **Builder:** Deploying smart contracts on **Base** network
 - ⚡ **Mission:** Leaping across the Web3 ecosystem!
 
 ---
@@ -52,12 +50,13 @@
 ### 📊 Spider Power Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=goldengem7&show_icons=true&bg_color=0d1117&title_color=e23636&icon_color=0052ff&text_color=ffffff&border_color=e23636&hide_border=false" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=goldengem7&background=0D1117&border=0052FF&stroke=0052FF&ring=E23636&fire=E23636&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=0052FF&sideLabels=0052FF&dates=8B949E&hide_border=false" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api?username=goldengem7&show_icons=true&theme=blood&hide_border=true" height="165" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=goldengem7&theme=blood&hide_border=true" height="165" />
 </div>
 
 <br/>
 
 <div align="center">
+  <!-- Spider-Verse Bottom Wave -->
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,5&height=90&section=footer" width="100%"/>
 </div>
