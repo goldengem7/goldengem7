@@ -1,72 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="100%" height="100%">
   <defs>
     <style>
-      @keyframes floatAction {
-        0% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-14px) rotate(2deg); }
-        100% { transform: translateY(0px) rotate(0deg); }
+      @keyframes breathe {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-8px) scale(1.02); }
       }
-      @keyframes webBlast {
-        0%, 100% { stroke-dashoffset: 0; opacity: 0.9; stroke-width: 4; }
-        50% { stroke-dashoffset: 20; opacity: 1; stroke-width: 6; }
+      @keyframes spiderSenseTingle {
+        0%, 100% { opacity: 0; transform: scale(0.9); }
+        40%, 60% { opacity: 0.95; transform: scale(1.08); }
       }
-      @keyframes energySparks {
-        0%, 100% { transform: scale(1); opacity: 0.5; }
-        50% { transform: scale(1.3); opacity: 1; }
+      @keyframes eyeGlint {
+        0%, 88%, 100% { filter: drop-shadow(0 0 3px #FFFFFF); }
+        92%, 96% { filter: drop-shadow(0 0 12px #38BDF8); }
       }
-      @keyframes eyeGlow {
-        0%, 100% { filter: drop-shadow(0 0 4px #FFFFFF); }
-        50% { filter: drop-shadow(0 0 14px #38BDF8); }
+      @keyframes webPulse {
+        0%, 100% { stroke-opacity: 0.4; }
+        50% { stroke-opacity: 1; stroke-width: 3; }
       }
-      @keyframes symbioteWiggle {
-        0%, 100% { transform: rotate(0deg); }
-        50% { transform: rotate(-6deg) scale(1.05); }
+      .hero-body {
+        transform-origin: 300px 350px;
+        animation: breathe 3.5s ease-in-out infinite;
       }
-      .action-hero {
-        transform-origin: 375px 250px;
-        animation: floatAction 3.2s ease-in-out infinite;
+      .spider-sense {
+        transform-origin: 300px 140px;
+        animation: spiderSenseTingle 2.4s ease-in-out infinite;
       }
-      .web-beam {
-        animation: webBlast 1.5s linear infinite;
+      .spidey-eyes {
+        animation: eyeGlint 3s infinite ease-in-out;
       }
-      .sparks {
-        transform-origin: center;
-        animation: energySparks 1.8s ease-in-out infinite;
-      }
-      .spider-eyes {
-        animation: eyeGlow 2.5s ease-in-out infinite;
-      }
-      .symbiote {
-        transform-origin: 200px 300px;
-        animation: symbioteWiggle 4s ease-in-out infinite;
+      .web-aura {
+        animation: webPulse 2s infinite ease-in-out;
       }
     </style>
 
-    <linearGradient id="spideyRed" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF334B" />
-      <stop offset="50%" stop-color="#E21B36" />
-      <stop offset="100%" stop-color="#8B0014" />
-    </linearGradient>
+    <!-- Gradients -->
+    <radialGradient id="muscleRed" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF384D" />
+      <stop offset="45%" stop-color="#E21B36" />
+      <stop offset="85%" stop-color="#990014" />
+      <stop offset="100%" stop-color="#4A000A" />
+    </radialGradient>
 
-    <linearGradient id="spideyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+    <radialGradient id="headMuscle" cx="40%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#FF4D61" />
+      <stop offset="55%" stop-color="#D90429" />
+      <stop offset="90%" stop-color="#800010" />
+      <stop offset="100%" stop-color="#3A0007" />
+    </radialGradient>
+
+    <linearGradient id="muscleBlue" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0066FF" />
-      <stop offset="60%" stop-color="#003594" />
-      <stop offset="100%" stop-color="#051336" />
+      <stop offset="40%" stop-color="#003CBD" />
+      <stop offset="80%" stop-color="#001F66" />
+      <stop offset="100%" stop-color="#020B1F" />
     </linearGradient>
 
-    <linearGradient id="venomDark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#2D004F" />
-      <stop offset="60%" stop-color="#12051E" />
-      <stop offset="100%" stop-color="#05000A" />
+    <linearGradient id="senseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FACC15" />
+      <stop offset="50%" stop-color="#EF4444" />
+      <stop offset="100%" stop-color="#38BDF8" />
     </linearGradient>
 
-    <linearGradient id="webLaser" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="70%" stop-color="#38BDF8" />
-      <stop offset="100%" stop-color="#E23636" />
-    </linearGradient>
-
-    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="4" result="blur" />
       <feMerge>
         <feMergeNode in="blur" />
@@ -75,88 +70,107 @@
     </filter>
   </defs>
 
-  <g class="action-hero">
-    <!-- Speed Lines -->
-    <g opacity="0.35">
-      <line x1="100" y1="100" x2="280" y2="190" stroke="#38BDF8" stroke-width="2" stroke-dasharray="15,10" />
-      <line x1="80" y1="240" x2="260" y2="240" stroke="#E23636" stroke-width="2.5" stroke-dasharray="20,10" />
-      <line x1="120" y1="360" x2="300" y2="280" stroke="#38BDF8" stroke-width="2" stroke-dasharray="15,10" />
-      <line x1="520" y1="120" x2="680" y2="80" stroke="#E23636" stroke-width="2" stroke-dasharray="15,10" />
-      <line x1="560" y1="320" x2="720" y2="380" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="20,10" />
+  <!-- SPIDER-SENSE TINGLING AURA -->
+  <g class="spider-sense">
+    <path d="M 230 110 Q 210 80 180 70 M 250 85 Q 240 50 210 30 M 285 70 Q 290 30 270 10" stroke="url(#senseGrad)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#glow)" />
+    <path d="M 370 110 Q 390 80 420 70 M 350 85 Q 360 50 390 30 M 315 70 Q 310 30 330 10" stroke="url(#senseGrad)" stroke-width="3" stroke-linecap="round" fill="none" filter="url(#glow)" />
+    <path d="M 220 130 Q 300 40 380 130" stroke="url(#senseGrad)" stroke-width="2" stroke-dasharray="6,4" fill="none" filter="url(#glow)" />
+  </g>
+
+  <!-- REALISTIC ANATOMICAL SPIDER-MAN -->
+  <g class="hero-body">
+    <!-- Left Leg (Grounded) -->
+    <path d="M 220 320 Q 150 330 120 375 Q 110 405 130 435 Q 165 440 210 390 Q 235 350 220 320 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 120 395 Q 85 410 80 450 Q 80 480 115 485 Q 150 485 145 440 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 80 460 L 45 480 L 75 490 L 115 485 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+
+    <!-- Right Leg (Forward Bent Knee) -->
+    <path d="M 370 320 Q 440 330 470 370 Q 490 400 470 430 Q 430 435 380 385 Q 360 350 370 320 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 470 395 Q 505 410 515 450 Q 515 480 480 485 Q 445 485 450 440 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 515 460 L 550 480 L 520 490 L 480 485 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+
+    <!-- Pelvis & Belt -->
+    <path d="M 240 320 Q 300 340 360 320 L 370 365 Q 300 390 230 365 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2" />
+    <path d="M 245 315 Q 300 335 355 315 L 358 335 Q 300 355 242 335 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="1.5" />
+
+    <!-- Torso & Abs -->
+    <path d="M 230 220 C 215 260 225 300 245 325 L 355 325 C 375 300 385 260 370 220 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 240 200 C 240 180 300 175 360 200 C 370 245 360 300 345 325 C 300 335 255 325 240 200 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+
+    <!-- Pecs & 6-Pack Lines -->
+    <path d="M 242 205 Q 295 215 300 240 Q 248 245 242 205 Z" fill="none" stroke="#66000E" stroke-width="2.5" opacity="0.6" />
+    <path d="M 358 205 Q 305 215 300 240 Q 352 245 358 205 Z" fill="none" stroke="#66000E" stroke-width="2.5" opacity="0.6" />
+    <line x1="300" y1="200" x2="300" y2="320" stroke="#66000E" stroke-width="2.5" opacity="0.6" />
+    <path d="M 275 255 Q 300 262 325 255" stroke="#66000E" stroke-width="2" fill="none" opacity="0.6" />
+    <path d="M 272 278 Q 300 286 328 278" stroke="#66000E" stroke-width="2" fill="none" opacity="0.6" />
+    <path d="M 270 302 Q 300 310 330 302" stroke="#66000E" stroke-width="2" fill="none" opacity="0.6" />
+
+    <!-- Spider Emblem -->
+    <g transform="translate(300, 222) scale(1.1)">
+      <ellipse cx="0" cy="0" rx="3.5" ry="6.5" fill="#050B18" />
+      <circle cx="0" cy="-6" r="2.5" fill="#050B18" />
+      <path d="M -2 -4 Q -16 -16 -22 -22 M -2 -2 Q -18 -6 -24 2" stroke="#050B18" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <path d="M 2 -4 Q 16 -16 22 -22 M 2 -2 Q 18 -6 24 2" stroke="#050B18" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <path d="M -2 2 Q -18 8 -20 18 M -2 4 Q -12 16 -12 24" stroke="#050B18" stroke-width="2.5" stroke-linecap="round" fill="none" />
+      <path d="M 2 2 Q 18 8 20 18 M 2 4 Q 12 16 12 24" stroke="#050B18" stroke-width="2.5" stroke-linecap="round" fill="none" />
     </g>
 
-    <!-- Venom Tendrils -->
-    <g class="symbiote" opacity="0.85">
-      <path d="M 120 380 Q 180 340 190 260 Q 195 200 130 160 Q 110 150 140 180 Q 165 240 120 380 Z" fill="url(#venomDark)" stroke="#8B5CF6" stroke-width="1.5" />
-      <path d="M 150 420 Q 230 380 220 300 Q 200 250 250 220 Q 220 270 190 350 Z" fill="url(#venomDark)" stroke="#8B5CF6" stroke-width="1.5" />
-      <circle cx="210" cy="250" r="6" fill="#8B5CF6" class="sparks" filter="url(#neon)" />
-      <circle cx="160" cy="190" r="4" fill="#38BDF8" class="sparks" />
+    <!-- Torso Web Grid -->
+    <g stroke="#050B18" stroke-width="1.2" opacity="0.4" fill="none">
+      <path d="M 255 190 Q 300 180 345 190" />
+      <path d="M 245 220 Q 300 210 355 220" />
+      <path d="M 250 250 Q 300 240 350 250" />
+      <path d="M 255 280 Q 300 270 345 280" />
+      <path d="M 260 305 Q 300 295 340 305" />
     </g>
 
-    <!-- Web Blast Beam -->
-    <g>
-      <path d="M 460 210 Q 560 180 720 140" stroke="url(#webLaser)" stroke-width="5" fill="none" class="web-beam" filter="url(#neon)" stroke-dasharray="12,6" />
-      <path d="M 460 210 Q 540 220 730 230" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8" stroke-dasharray="8,4" />
-      <circle cx="460" cy="210" r="10" fill="#FFFFFF" filter="url(#neon)" />
-      <circle cx="460" cy="210" r="18" fill="#38BDF8" opacity="0.4" filter="url(#neon)" />
+    <!-- Left Arm (Planted Fist) -->
+    <path d="M 235 195 Q 195 195 185 225 Q 185 255 225 240 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 195 225 Q 170 265 165 310 Q 180 330 205 310 Q 215 265 215 235 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 165 310 Q 150 365 140 400 Q 165 420 185 390 Q 195 350 205 310 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 140 400 L 120 425 L 155 435 L 175 410 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+
+    <!-- Right Arm (Web-Shooter Aimed) -->
+    <path d="M 365 195 Q 405 195 415 225 Q 415 255 375 240 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 405 225 Q 430 260 455 295 Q 440 320 415 305 Q 395 265 385 235 Z" fill="url(#muscleBlue)" stroke="#050B18" stroke-width="2.5" />
+    <path d="M 445 290 Q 470 330 490 365 Q 470 380 445 355 Q 430 320 420 295 Z" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+    <g transform="translate(485, 360)">
+      <circle cx="0" cy="0" r="10" fill="url(#muscleRed)" stroke="#050B18" stroke-width="2.5" />
+      <circle cx="8" cy="8" r="4" fill="#38BDF8" filter="url(#glow)" />
+      <line x1="8" y1="8" x2="28" y2="28" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" class="web-aura" filter="url(#glow)" />
     </g>
 
-    <!-- SPIDER-MAN BODY (FLYING KICK POSE) -->
-    <g>
-      <!-- Left Leg (Tucked Aerial Knee) -->
-      <path d="M 330 250 Q 300 290 280 340" stroke="url(#spideyBlue)" stroke-width="24" stroke-linecap="round" fill="none" />
-      <path d="M 330 250 Q 300 290 280 340" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <path d="M 280 340 Q 310 380 350 400" stroke="url(#spideyRed)" stroke-width="20" stroke-linecap="round" fill="none" />
-      <path d="M 280 340 Q 310 380 350 400" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <path d="M 350 400 L 375 410 L 355 422 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="2.5" />
-
-      <!-- Right Leg (Flying Kick) -->
-      <path d="M 310 230 Q 240 210 180 200" stroke="url(#spideyBlue)" stroke-width="26" stroke-linecap="round" fill="none" />
-      <path d="M 310 230 Q 240 210 180 200" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <path d="M 180 200 Q 130 195 80 190" stroke="url(#spideyRed)" stroke-width="22" stroke-linecap="round" fill="none" />
-      <path d="M 180 200 Q 130 195 80 190" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <path d="M 80 190 L 50 180 L 55 208 L 85 202 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3" />
-      <ellipse cx="50" cy="190" rx="14" ry="26" fill="none" stroke="#38BDF8" stroke-width="3.5" filter="url(#neon)" opacity="0.85" />
-      <ellipse cx="40" cy="190" rx="8" ry="16" fill="#FFFFFF" filter="url(#neon)" opacity="0.9" />
-
-      <!-- Torso -->
-      <path d="M 310 170 Q 370 150 400 190 L 360 270 Q 310 260 310 170 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3.5" />
-      <path d="M 312 185 Q 330 220 325 258 Q 310 240 312 185 Z" fill="url(#spideyBlue)" />
-      <path d="M 385 185 Q 370 230 355 268 Q 380 240 385 185 Z" fill="url(#spideyBlue)" />
-
-      <!-- Chest Emblem -->
-      <g transform="translate(355, 205) rotate(15) scale(0.95)">
-        <ellipse cx="0" cy="0" rx="4" ry="7" fill="#000" />
-        <path d="M -3 -4 Q -16 -14 -20 -20 M -3 -1 Q -18 -4 -22 2 M -3 2 Q -18 7 -20 16 M -3 4 Q -12 14 -12 22" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round" />
-        <path d="M 3 -4 Q 16 -14 20 -20 M 3 -1 Q 18 -4 22 2 M 3 2 Q 18 7 20 16 M 3 4 Q 12 14 12 22" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <!-- Head & Mask -->
+    <g transform="translate(300, 140)">
+      <path d="M -18 20 Q -24 45 -28 60 L 28 60 Q 24 45 18 20 Z" fill="url(#headMuscle)" stroke="#050B18" stroke-width="2" />
+      <path d="M -30 -25 C -34 10 -22 45 0 52 C 22 45 34 10 30 -25 C 26 -55 -26 -55 -30 -25 Z" fill="url(#headMuscle)" stroke="#050B18" stroke-width="3" />
+      <circle cx="0" cy="5" r="2.5" fill="#050B18" opacity="0.5" />
+      <g stroke="#050B18" stroke-width="1.3" opacity="0.45">
+        <line x1="0" y1="5" x2="-28" y2="-20" />
+        <line x1="0" y1="5" x2="-18" y2="-45" />
+        <line x1="0" y1="5" x2="0" y2="-52" />
+        <line x1="0" y1="5" x2="18" y2="-45" />
+        <line x1="0" y1="5" x2="28" y2="-20" />
+        <line x1="0" y1="5" x2="-25" y2="25" />
+        <line x1="0" y1="5" x2="-14" y2="48" />
+        <line x1="0" y1="5" x2="0" y2="52" />
+        <line x1="0" y1="5" x2="14" y2="48" />
+        <line x1="0" y1="5" x2="25" y2="25" />
+      </g>
+      <g stroke="#050B18" stroke-width="1.3" fill="none" opacity="0.45">
+        <path d="M -12 -8 Q 0 -16 12 -8 Q 16 6 12 16 Q 0 24 -12 16 Q -16 6 -12 -8 Z" />
+        <path d="M -22 -20 Q 0 -34 22 -20 Q 28 10 22 34 Q 0 46 -22 34 Q -28 10 -22 -20 Z" />
       </g>
 
-      <!-- Web Grid -->
-      <path d="M 355 160 L 340 265 M 325 180 Q 360 185 395 195 M 320 215 Q 355 218 375 235 M 320 245 Q 345 245 360 258" stroke="#000" stroke-width="1.4" opacity="0.4" fill="none" />
+      <!-- Glossy Comic Eyes -->
+      <g class="spidey-eyes">
+        <path d="M -6 -8 C -24 -10 -30 14 -30 18 C -18 24 -6 10 -6 -8 Z" fill="#050B18" />
+        <path d="M -8 -4 C -20 -3 -25 12 -25 14 C -16 18 -8 6 -8 -4 Z" fill="#FFFFFF" />
+        <path d="M -12 -2 Q -18 -1 -21 8" stroke="#38BDF8" stroke-width="1.8" fill="none" opacity="0.8" />
 
-      <!-- Arms -->
-      <path d="M 320 180 Q 325 130 350 95" stroke="url(#spideyRed)" stroke-width="18" stroke-linecap="round" fill="none" />
-      <path d="M 320 180 Q 325 130 350 95" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <circle cx="350" cy="95" r="11" fill="url(#spideyRed)" stroke="#000" stroke-width="2.5" />
-
-      <path d="M 390 190 Q 425 198 460 210" stroke="url(#spideyRed)" stroke-width="20" stroke-linecap="round" fill="none" />
-      <path d="M 390 190 Q 425 198 460 210" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
-      <path d="M 460 210 L 482 202 L 476 222 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3" />
-
-      <!-- Head & Mask -->
-      <g transform="translate(370, 140) rotate(12)">
-        <ellipse cx="0" cy="0" rx="26" ry="32" fill="url(#spideyRed)" stroke="#000" stroke-width="3.5" />
-        <circle cx="0" cy="2" r="2.5" fill="#000" opacity="0.4" />
-        <path d="M 0 2 L -24 -15 M 0 2 L -14 -30 M 0 2 L 0 -32 M 0 2 L 14 -30 M 0 2 L 24 -15 M 0 2 L -24 15 M 0 2 L -14 30 M 0 2 L 14 30 M 0 2 L 24 15" stroke="#000" stroke-width="1.3" opacity="0.4" />
-        <path d="M -12 -8 Q 0 -15 12 -8 Q 15 2 12 12 Q 0 18 -12 12 Q -15 2 -12 -8 Z" stroke="#000" stroke-width="1.3" fill="none" opacity="0.4" />
-
-        <!-- Glowing Eyes -->
-        <g class="spider-eyes">
-          <path d="M -5 -10 Q -22 -10 -24 8 Q -12 12 -5 0 Z" fill="#000" />
-          <path d="M -6 -7 Q -19 -7 -20 5 Q -12 8 -6 0 Z" fill="#FFFFFF" />
-          <path d="M 5 -10 Q 22 -10 24 8 Q 12 12 5 0 Z" fill="#000" />
-          <path d="M 6 -7 Q 19 -7 20 5 Q 12 8 6 0 Z" fill="#FFFFFF" />
-        </g>
+        <path d="M 6 -8 C 24 -10 30 14 30 18 C 18 24 6 10 6 -8 Z" fill="#050B18" />
+        <path d="M 8 -4 C 20 -3 25 12 25 14 C 16 18 8 6 8 -4 Z" fill="#FFFFFF" />
+        <path d="M 12 -2 Q 18 -1 21 8" stroke="#38BDF8" stroke-width="1.8" fill="none" opacity="0.8" />
       </g>
     </g>
   </g>
