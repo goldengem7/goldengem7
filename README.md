@@ -1,16 +1,18 @@
 <div align="center">
 
-  <!-- Spider-Verse Animated Header -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,1,2,5&height=200&section=header&text=🕷️%20GOLDENJOY%20•%20SPIDER-VERSE%20🕸️&fontSize=34&fontColor=ffffff&animation=twinkling" width="100%"/>
+  <!-- 🕷️ Animated Spider-Man Flying Kick & Web Blast Scene -->
+  <img src="spiderman_action.svg" width="100%" alt="Spider-Man Action" />
 
-  <!-- Typing Animation -->
+  <br/><br/>
+
+  <!-- 🕸️ Animated Typing Title -->
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Bungee&weight=700&size=24&pause=1000&color=E23636&center=true&vCenter=true&width=550&lines=BUILDER+%E2%80%A2+GAMER+%E2%80%A2+TRADER;WEB-SLINGING+THROUGH+BASE+CHAIN;WITH+GREAT+POWER+COMES+GREAT+CODE!" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Bungee&weight=700&size=26&pause=1000&color=E23636&center=true&vCenter=true&width=550&lines=SPIDER-VERSE+%E2%80%A2+GOLDENJOY;BUILDER+%E2%80%A2+GAMER+%E2%80%A2+TRADER;PROTECTING+THE+BASE+CITY;WITH+GREAT+POWER+COMES+GREAT+CODE!" alt="Typing SVG" />
   </a>
 
   <br/><br/>
 
-  <!-- Social Badges -->
+  <!-- 🌐 Social Badges -->
   <a href="https://discord.com">
     <img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
@@ -27,10 +29,10 @@
 
 ### 🕷️ About Me
 
-- 🎮 **Gamer:** Grinding competitive games & exploring on-chain metaverses
-- 📈 **Trader:** Crypto & decentralized market trader
+- 🎮 **Gamer:** Grinding competitive games & on-chain metaverses
+- 📈 **Trader:** Active in crypto, tokens & market trends
 - 🛠️ **Builder:** Deploying smart contracts on **Base** network
-- ⚡ **Mission:** Leaping across the Web3 ecosystem!
+- ⚡ **Mission:** Leaping across the Web3 Spider-Verse!
 
 ---
 
@@ -46,15 +48,6 @@
 </p>
 
 ---
-
-### 📊 Spider Power Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=goldengem7&show_icons=true&theme=blood&hide_border=true" height="165" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=goldengem7&theme=blood&hide_border=true" height="165" />
-</div>
-
-<br/>
 
 <div align="center">
   <!-- Spider-Verse Bottom Wave -->
