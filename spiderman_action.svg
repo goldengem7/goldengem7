@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes floatAction {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-14px) rotate(2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+      }
+      @keyframes webBlast {
+        0%, 100% { stroke-dashoffset: 0; opacity: 0.9; stroke-width: 4; }
+        50% { stroke-dashoffset: 20; opacity: 1; stroke-width: 6; }
+      }
+      @keyframes energySparks {
+        0%, 100% { transform: scale(1); opacity: 0.5; }
+        50% { transform: scale(1.3); opacity: 1; }
+      }
+      @keyframes eyeGlow {
+        0%, 100% { filter: drop-shadow(0 0 4px #FFFFFF); }
+        50% { filter: drop-shadow(0 0 14px #38BDF8); }
+      }
+      @keyframes symbioteWiggle {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(-6deg) scale(1.05); }
+      }
+      .action-hero {
+        transform-origin: 375px 250px;
+        animation: floatAction 3.2s ease-in-out infinite;
+      }
+      .web-beam {
+        animation: webBlast 1.5s linear infinite;
+      }
+      .sparks {
+        transform-origin: center;
+        animation: energySparks 1.8s ease-in-out infinite;
+      }
+      .spider-eyes {
+        animation: eyeGlow 2.5s ease-in-out infinite;
+      }
+      .symbiote {
+        transform-origin: 200px 300px;
+        animation: symbioteWiggle 4s ease-in-out infinite;
+      }
+    </style>
+
+    <linearGradient id="spideyRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF334B" />
+      <stop offset="50%" stop-color="#E21B36" />
+      <stop offset="100%" stop-color="#8B0014" />
+    </linearGradient>
+
+    <linearGradient id="spideyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0066FF" />
+      <stop offset="60%" stop-color="#003594" />
+      <stop offset="100%" stop-color="#051336" />
+    </linearGradient>
+
+    <linearGradient id="venomDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D004F" />
+      <stop offset="60%" stop-color="#12051E" />
+      <stop offset="100%" stop-color="#05000A" />
+    </linearGradient>
+
+    <linearGradient id="webLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#E23636" />
+    </linearGradient>
+
+    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g class="action-hero">
+    <!-- Speed Lines -->
+    <g opacity="0.35">
+      <line x1="100" y1="100" x2="280" y2="190" stroke="#38BDF8" stroke-width="2" stroke-dasharray="15,10" />
+      <line x1="80" y1="240" x2="260" y2="240" stroke="#E23636" stroke-width="2.5" stroke-dasharray="20,10" />
+      <line x1="120" y1="360" x2="300" y2="280" stroke="#38BDF8" stroke-width="2" stroke-dasharray="15,10" />
+      <line x1="520" y1="120" x2="680" y2="80" stroke="#E23636" stroke-width="2" stroke-dasharray="15,10" />
+      <line x1="560" y1="320" x2="720" y2="380" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="20,10" />
+    </g>
+
+    <!-- Venom Tendrils -->
+    <g class="symbiote" opacity="0.85">
+      <path d="M 120 380 Q 180 340 190 260 Q 195 200 130 160 Q 110 150 140 180 Q 165 240 120 380 Z" fill="url(#venomDark)" stroke="#8B5CF6" stroke-width="1.5" />
+      <path d="M 150 420 Q 230 380 220 300 Q 200 250 250 220 Q 220 270 190 350 Z" fill="url(#venomDark)" stroke="#8B5CF6" stroke-width="1.5" />
+      <circle cx="210" cy="250" r="6" fill="#8B5CF6" class="sparks" filter="url(#neon)" />
+      <circle cx="160" cy="190" r="4" fill="#38BDF8" class="sparks" />
+    </g>
+
+    <!-- Web Blast Beam -->
+    <g>
+      <path d="M 460 210 Q 560 180 720 140" stroke="url(#webLaser)" stroke-width="5" fill="none" class="web-beam" filter="url(#neon)" stroke-dasharray="12,6" />
+      <path d="M 460 210 Q 540 220 730 230" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.8" stroke-dasharray="8,4" />
+      <circle cx="460" cy="210" r="10" fill="#FFFFFF" filter="url(#neon)" />
+      <circle cx="460" cy="210" r="18" fill="#38BDF8" opacity="0.4" filter="url(#neon)" />
+    </g>
+
+    <!-- SPIDER-MAN BODY (FLYING KICK POSE) -->
+    <g>
+      <!-- Left Leg (Tucked Aerial Knee) -->
+      <path d="M 330 250 Q 300 290 280 340" stroke="url(#spideyBlue)" stroke-width="24" stroke-linecap="round" fill="none" />
+      <path d="M 330 250 Q 300 290 280 340" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 280 340 Q 310 380 350 400" stroke="url(#spideyRed)" stroke-width="20" stroke-linecap="round" fill="none" />
+      <path d="M 280 340 Q 310 380 350 400" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 350 400 L 375 410 L 355 422 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="2.5" />
+
+      <!-- Right Leg (Flying Kick) -->
+      <path d="M 310 230 Q 240 210 180 200" stroke="url(#spideyBlue)" stroke-width="26" stroke-linecap="round" fill="none" />
+      <path d="M 310 230 Q 240 210 180 200" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 180 200 Q 130 195 80 190" stroke="url(#spideyRed)" stroke-width="22" stroke-linecap="round" fill="none" />
+      <path d="M 180 200 Q 130 195 80 190" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 80 190 L 50 180 L 55 208 L 85 202 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3" />
+      <ellipse cx="50" cy="190" rx="14" ry="26" fill="none" stroke="#38BDF8" stroke-width="3.5" filter="url(#neon)" opacity="0.85" />
+      <ellipse cx="40" cy="190" rx="8" ry="16" fill="#FFFFFF" filter="url(#neon)" opacity="0.9" />
+
+      <!-- Torso -->
+      <path d="M 310 170 Q 370 150 400 190 L 360 270 Q 310 260 310 170 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3.5" />
+      <path d="M 312 185 Q 330 220 325 258 Q 310 240 312 185 Z" fill="url(#spideyBlue)" />
+      <path d="M 385 185 Q 370 230 355 268 Q 380 240 385 185 Z" fill="url(#spideyBlue)" />
+
+      <!-- Chest Emblem -->
+      <g transform="translate(355, 205) rotate(15) scale(0.95)">
+        <ellipse cx="0" cy="0" rx="4" ry="7" fill="#000" />
+        <path d="M -3 -4 Q -16 -14 -20 -20 M -3 -1 Q -18 -4 -22 2 M -3 2 Q -18 7 -20 16 M -3 4 Q -12 14 -12 22" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+        <path d="M 3 -4 Q 16 -14 20 -20 M 3 -1 Q 18 -4 22 2 M 3 2 Q 18 7 20 16 M 3 4 Q 12 14 12 22" stroke="#000" stroke-width="2.5" fill="none" stroke-linecap="round" />
+      </g>
+
+      <!-- Web Grid -->
+      <path d="M 355 160 L 340 265 M 325 180 Q 360 185 395 195 M 320 215 Q 355 218 375 235 M 320 245 Q 345 245 360 258" stroke="#000" stroke-width="1.4" opacity="0.4" fill="none" />
+
+      <!-- Arms -->
+      <path d="M 320 180 Q 325 130 350 95" stroke="url(#spideyRed)" stroke-width="18" stroke-linecap="round" fill="none" />
+      <path d="M 320 180 Q 325 130 350 95" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <circle cx="350" cy="95" r="11" fill="url(#spideyRed)" stroke="#000" stroke-width="2.5" />
+
+      <path d="M 390 190 Q 425 198 460 210" stroke="url(#spideyRed)" stroke-width="20" stroke-linecap="round" fill="none" />
+      <path d="M 390 190 Q 425 198 460 210" stroke="#000" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.5" />
+      <path d="M 460 210 L 482 202 L 476 222 Z" fill="url(#spideyRed)" stroke="#000" stroke-width="3" />
+
+      <!-- Head & Mask -->
+      <g transform="translate(370, 140) rotate(12)">
+        <ellipse cx="0" cy="0" rx="26" ry="32" fill="url(#spideyRed)" stroke="#000" stroke-width="3.5" />
+        <circle cx="0" cy="2" r="2.5" fill="#000" opacity="0.4" />
+        <path d="M 0 2 L -24 -15 M 0 2 L -14 -30 M 0 2 L 0 -32 M 0 2 L 14 -30 M 0 2 L 24 -15 M 0 2 L -24 15 M 0 2 L -14 30 M 0 2 L 14 30 M 0 2 L 24 15" stroke="#000" stroke-width="1.3" opacity="0.4" />
+        <path d="M -12 -8 Q 0 -15 12 -8 Q 15 2 12 12 Q 0 18 -12 12 Q -15 2 -12 -8 Z" stroke="#000" stroke-width="1.3" fill="none" opacity="0.4" />
+
+        <!-- Glowing Eyes -->
+        <g class="spider-eyes">
+          <path d="M -5 -10 Q -22 -10 -24 8 Q -12 12 -5 0 Z" fill="#000" />
+          <path d="M -6 -7 Q -19 -7 -20 5 Q -12 8 -6 0 Z" fill="#FFFFFF" />
+          <path d="M 5 -10 Q 22 -10 24 8 Q 12 12 5 0 Z" fill="#000" />
+          <path d="M 6 -7 Q 19 -7 20 5 Q 12 8 6 0 Z" fill="#FFFFFF" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
