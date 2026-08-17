@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- 🕷️ Animated Spider-Man Flying Kick & Web Blast Scene -->
-  <img src="spiderman_option2_glitch.svg" width="100%" alt="Spider-Man Action" />
+  <img src="spiderman_option2_glitch.svg" width="50%" alt="Spider-Man Action" />
 
   <br/><br/>
 
