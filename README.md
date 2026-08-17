@@ -31,7 +31,7 @@
 
 - 🎮 **Gamer:** Grinding competitive games & on-chain metaverses
 - 📈 **Trader:** Active in crypto, tokens & market trends
-- 🛠️ **Builder:** Deploying smart contracts on **Base** network
+- 🛠️ **Builder:** learning Full stack Development
 - ⚡ **Mission:** Leaping across the Web3 Spider-Verse!
 
 ---
